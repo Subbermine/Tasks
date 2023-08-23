@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="load()">
+    <header>
+      <h1>Notes</h1>
+      <button class="dis-button" onclick="new_notes()">
+        Create new notes +
+      </button>
+    </header>
+    <main>
+      <div id="maintasks">
+        <ul id="list-items"></ul>
+      </div>
+      <div class="popup" id="popup">
+        <h2 class="popup">Input Heading of note</h2>
+        <span id="cancel" onclick="cancel()" class="popup">X</span>
+        <input id="heading" class="popup" placeholder="Heading" type="text" />
+        <h3 class="popup">Please input the content of note</h3>
+        <textarea
+          id="content"
+          class="popup"
+          id="maintext"
+          placeholder="main content of note"
+          cols="40"
+          rows="10"
+        ></textarea>
+        <button id="bold">B</button>
+        <button onclick="add_note()" class="popup">Enter</button>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
